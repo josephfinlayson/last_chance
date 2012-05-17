@@ -1,5 +1,14 @@
 LastChance::Application.routes.draw do
+  get "static_pages/home"
+
+  get "static_pages/help"
+
   resources :microposts
+
+ root to: 'static_pages#home'
+ 
+ match '/home', to: 'microposts#new'
+ match 'help',  to: 'static_pages#help'
   #match '/home' static_pages#home
 
   # The priority is based upon order of creation:
