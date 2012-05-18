@@ -9,6 +9,7 @@ LastChance::Application.routes.draw do
  
  match '/home', to: 'microposts#new'
  match 'help',  to: 'static_pages#help'
+
   #match '/home' static_pages#home
 
   # The priority is based upon order of creation:

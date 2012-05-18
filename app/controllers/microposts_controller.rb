@@ -13,12 +13,14 @@ class MicropostsController < ApplicationController
   # GET /microposts/1
   # GET /microposts/1.json
   def show
-    @micropost = Micropost.find(params[:id])
+    # @micropost = Micropost.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @micropost }
-    end
+    # respond_to do |format|
+    #   format.html # show.html.erb
+    #   format.json { render json: @micropost }
+
+    # end
+    redirect_to :back
   end
 
   # GET /microposts/new
@@ -31,10 +33,10 @@ class MicropostsController < ApplicationController
     #  format.json { render json: @micropost }
     
 
-    @microposts = Micropost.all
+    @microposts = Micropost.all(:order => "created_at DESC")
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # new.html.erb # index.html.erb
       format.json { render json: @microposts }
     end
   end

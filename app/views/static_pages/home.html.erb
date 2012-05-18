@@ -1,5 +1,5 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<h1>Linkup Links Login</h1>
+<h2>Restricted Entry</h2>
 
 
 <script language="javascript">
@@ -178,7 +178,7 @@ function calcMD5(str)
   return rhex(a) + rhex(b) + rhex(c) + rhex(d);
 }
 
-var password=prompt("please enter password", "password");
+var password=prompt("Please enter password", "");
 if (calcMD5(password)=="f6e79f571b460aec5a56fddb576d3cf4") { 
 window.location= "/home";
  }else {
@@ -186,3 +186,9 @@ window.location= "/home";
   }
 </script>
 
+
+<h2>
+<script type="text/javascript">
+ document.write('<a href="javascript:history.go(0)">Click here to try again</a>');
+ </script>
+</h2>

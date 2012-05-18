@@ -9,17 +9,20 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_field :content %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br />
+  <% end %>
+<table>
+  <tr>
+    <div class="conversation_field">
+    <%= f.label :content, "Continue the conversation" %><br />
+    <%= f.text_area :content %>
+  </div></tr>
+  <tr><div class="name_field">
+    <%= f.label :name, "Add your name" %><br />
     <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  </div></tr>
+<tr>  <div class="actions">
+    <%= f.submit "Add to Conversation" %>
+  </tr></div>
 <% end %>
+</table>
